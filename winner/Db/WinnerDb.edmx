@@ -1,0 +1,1299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="winnerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ACPPACKDOUBLEACTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Firstimg" Type="nvarchar" MaxLength="500" />
+          <Property Name="SecondImg" Type="nvarchar" MaxLength="500" />
+          <Property Name="tanksize" Type="nvarchar" MaxLength="500" />
+          <Property Name="width" Type="nvarchar" MaxLength="500" />
+          <Property Name="length" Type="nvarchar" MaxLength="500" />
+          <Property Name="HEIGHT" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKDUTYCYCLE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DUTYCYCLE" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKFLOWRATE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FLOWRATE" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKFURTHERCOMMENTS">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FURTHERCOMMENTS" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKMOTORSIZE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MOTORSIZE" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKOPERATION">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OPERATION" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKPENDENT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PENDENT" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKPOSITIONOFMOTOR">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="POSITIONOFMOTOR" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKPRESSURESETTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="PRESSURESETTING" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKPT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Firstimg" Type="nvarchar" MaxLength="500" />
+          <Property Name="SecondImg" Type="nvarchar" MaxLength="500" />
+          <Property Name="tanksize" Type="nvarchar" MaxLength="500" />
+          <Property Name="width" Type="nvarchar" MaxLength="500" />
+          <Property Name="length" Type="nvarchar" MaxLength="500" />
+          <Property Name="HEIGHT" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKQUANTITY">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QUANTITY" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKRESERVOIRSIZE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RESERVOIRSIZE" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKSINGLEACTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Firstimg" Type="nvarchar" MaxLength="500" />
+          <Property Name="SecondImg" Type="nvarchar" MaxLength="500" />
+          <Property Name="tanksize" Type="nvarchar" MaxLength="500" />
+          <Property Name="width" Type="nvarchar" MaxLength="500" />
+          <Property Name="length" Type="nvarchar" MaxLength="500" />
+          <Property Name="HEIGHT" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKTYPEOFSYSTEM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TYPEOFSYSTEM" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="ACPPACKVOLTAGE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VOLTAGE" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CARTRIDGES">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="picurl" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="CARTRIDGESProduct">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CARTRIDGESID" Type="int" />
+          <Property Name="productnumber" Type="nvarchar" MaxLength="500" />
+          <Property Name="name" Type="nvarchar" MaxLength="500" />
+          <Property Name="imgurl" Type="nvarchar" MaxLength="500" />
+          <Property Name="maxpressure" Type="nvarchar" MaxLength="500" />
+          <Property Name="maxpressureunit" Type="nvarchar" MaxLength="500" />
+          <Property Name="maxflow" Type="nvarchar" MaxLength="500" />
+          <Property Name="cavitytooling" Type="nvarchar" MaxLength="500" />
+          <Property Name="intallationtorque" Type="nvarchar" MaxLength="500" />
+          <Property Name="intallationtorqueunit" Type="nvarchar" MaxLength="500" />
+          <Property Name="weight" Type="nvarchar" MaxLength="500" />
+          <Property Name="fluidtemp" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="CARTRIDGESProductdetails">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CARTRIDGESID" Type="int" />
+          <Property Name="partno" Type="nvarchar" MaxLength="500" />
+          <Property Name="cavity" Type="nvarchar" MaxLength="500" />
+          <Property Name="price" Type="nvarchar" MaxLength="500" />
+          <Property Name="Firstimg" Type="nvarchar" MaxLength="500" />
+          <Property Name="secondimg" Type="nvarchar" MaxLength="500" />
+          <Property Name="maxoprationgprussure" Type="nvarchar" MaxLength="50" />
+          <Property Name="ratedflow" Type="nvarchar" MaxLength="50" />
+          <Property Name="cavitytooling" Type="nvarchar" MaxLength="50" />
+          <Property Name="installationtorque" Type="nvarchar" MaxLength="50" />
+          <Property Name="weight" Type="nvarchar" MaxLength="50" />
+          <Property Name="CRACKINGPRESSURE" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DCPPACK SYSTEM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="System" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DCPPACKCOMMENTS">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COMMENTS" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="DCPPACKDOUBLEEACTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Firstimg" Type="nvarchar" MaxLength="500" />
+          <Property Name="SecondImg" Type="nvarchar" MaxLength="500" />
+          <Property Name="tanksize" Type="nvarchar" MaxLength="500" />
+          <Property Name="width" Type="nvarchar" MaxLength="500" />
+          <Property Name="length" Type="nvarchar" MaxLength="500" />
+          <Property Name="Height" Type="nvarchar" MaxLength="500" />
+          <Property Name="HEAVYDUTYLENGTH" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DCPPACKFLOWRATE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FLOWRATE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DCPPACKMOTOR SIZE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sizes" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DCPPACKMOTORPOSITION">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MOTORPOSITION" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DCPPACKOPERATION">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="opration" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DCPPACKPENDENT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PENDENT" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DCPPACKPRESSURESETTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PRESSURESETTING" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DCPPACKPT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Firstimg" Type="nvarchar" MaxLength="500" />
+          <Property Name="SecondImg" Type="nvarchar" MaxLength="500" />
+          <Property Name="tanksize" Type="nvarchar" MaxLength="500" />
+          <Property Name="width" Type="nvarchar" MaxLength="500" />
+          <Property Name="length" Type="nvarchar" MaxLength="500" />
+          <Property Name="Height" Type="nvarchar" MaxLength="500" />
+          <Property Name="HEAVYDUTYLENGTH" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DCPPACKQUANTITY">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QUANTITY" Type="int" />
+        </EntityType>
+        <EntityType Name="DCPPACKRESERVOIRSIZE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RESERVOIRSIZE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DCPPACKSINGLEACTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Firstimg" Type="nvarchar" MaxLength="500" />
+          <Property Name="SecondImg" Type="nvarchar" MaxLength="500" />
+          <Property Name="tanksize" Type="nvarchar" MaxLength="500" />
+          <Property Name="width" Type="nvarchar" MaxLength="500" />
+          <Property Name="length" Type="nvarchar" MaxLength="500" />
+          <Property Name="Height" Type="nvarchar" MaxLength="500" />
+          <Property Name="HEAVYDUTYLENGTH" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DCPPACKVOLTAGE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="voltage" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Equivalents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sunmodelcode" Type="nvarchar" MaxLength="500" />
+          <Property Name="winnerModelcode" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="OPTIONALBODY">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CARTRIDGESID" Type="int" />
+          <Property Name="PARTNO" Type="nvarchar" MaxLength="500" />
+          <Property Name="MATERIAL" Type="nvarchar" MaxLength="500" />
+          <Property Name="MAXPRESSURE" Type="nvarchar" MaxLength="500" />
+          <Property Name="PRICE" Type="nvarchar" MaxLength="500" />
+          <Property Name="Firstimg" Type="nvarchar" MaxLength="500" />
+          <Property Name="secondimg" Type="nvarchar" MaxLength="500" />
+          <Property Name="cavity" Type="nvarchar" MaxLength="50" />
+          <Property Name="weight" Type="nvarchar" MaxLength="50" />
+          <Property Name="PORTSIZE" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="OPTIONALCOIL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CARTRIDGESID" Type="int" />
+          <Property Name="voltage" Type="nvarchar" MaxLength="50" />
+          <Property Name="price" Type="nvarchar" MaxLength="50" />
+          <Property Name="imgurl" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="OPTIONALHIRSHMANLED">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CARTRIDGESID" Type="int" />
+          <Property Name="VISUAL" Type="nvarchar" MaxLength="500" />
+          <Property Name="VOLTAGE" Type="nvarchar" MaxLength="500" />
+          <Property Name="price" Type="nvarchar" MaxLength="50" />
+          <Property Name="imgurl" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <Association Name="FK_CARTRIDGESProduct_CARTRIDGES">
+          <End Role="CARTRIDGES" Type="Self.CARTRIDGES" Multiplicity="0..1" />
+          <End Role="CARTRIDGESProduct" Type="Self.CARTRIDGESProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARTRIDGES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CARTRIDGESProduct">
+              <PropertyRef Name="CARTRIDGESID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARTRIDGESProductdetails_CARTRIDGES">
+          <End Role="CARTRIDGES" Type="Self.CARTRIDGES" Multiplicity="0..1" />
+          <End Role="CARTRIDGESProductdetails" Type="Self.CARTRIDGESProductdetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARTRIDGES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CARTRIDGESProductdetails">
+              <PropertyRef Name="CARTRIDGESID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OPTIONALBODY_CARTRIDGES">
+          <End Role="CARTRIDGES" Type="Self.CARTRIDGES" Multiplicity="0..1" />
+          <End Role="OPTIONALBODY" Type="Self.OPTIONALBODY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARTRIDGES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OPTIONALBODY">
+              <PropertyRef Name="CARTRIDGESID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OPTIONALCOIL_CARTRIDGES">
+          <End Role="CARTRIDGES" Type="Self.CARTRIDGES" Multiplicity="0..1" />
+          <End Role="OPTIONALCOIL" Type="Self.OPTIONALCOIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARTRIDGES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OPTIONALCOIL">
+              <PropertyRef Name="CARTRIDGESID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OPTIONALHIRSHMANLED_CARTRIDGES">
+          <End Role="CARTRIDGES" Type="Self.CARTRIDGES" Multiplicity="0..1" />
+          <End Role="OPTIONALHIRSHMANLED" Type="Self.OPTIONALHIRSHMANLED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARTRIDGES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OPTIONALHIRSHMANLED">
+              <PropertyRef Name="CARTRIDGESID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="winnerModelStoreContainer">
+          <EntitySet Name="ACPPACKDOUBLEACTING" EntityType="Self.ACPPACKDOUBLEACTING" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKDUTYCYCLE" EntityType="Self.ACPPACKDUTYCYCLE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKFLOWRATE" EntityType="Self.ACPPACKFLOWRATE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKFURTHERCOMMENTS" EntityType="Self.ACPPACKFURTHERCOMMENTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKMOTORSIZE" EntityType="Self.ACPPACKMOTORSIZE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKOPERATION" EntityType="Self.ACPPACKOPERATION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKPENDENT" EntityType="Self.ACPPACKPENDENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKPOSITIONOFMOTOR" EntityType="Self.ACPPACKPOSITIONOFMOTOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKPRESSURESETTING" EntityType="Self.ACPPACKPRESSURESETTING" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKPT" EntityType="Self.ACPPACKPT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKQUANTITY" EntityType="Self.ACPPACKQUANTITY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKRESERVOIRSIZE" EntityType="Self.ACPPACKRESERVOIRSIZE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKSINGLEACTING" EntityType="Self.ACPPACKSINGLEACTING" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKTYPEOFSYSTEM" EntityType="Self.ACPPACKTYPEOFSYSTEM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ACPPACKVOLTAGE" EntityType="Self.ACPPACKVOLTAGE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CARTRIDGES" EntityType="Self.CARTRIDGES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CARTRIDGESProduct" EntityType="Self.CARTRIDGESProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CARTRIDGESProductdetails" EntityType="Self.CARTRIDGESProductdetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACK SYSTEM" EntityType="Self.DCPPACK SYSTEM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKCOMMENTS" EntityType="Self.DCPPACKCOMMENTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKDOUBLEEACTING" EntityType="Self.DCPPACKDOUBLEEACTING" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKFLOWRATE" EntityType="Self.DCPPACKFLOWRATE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKMOTOR SIZE" EntityType="Self.DCPPACKMOTOR SIZE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKMOTORPOSITION" EntityType="Self.DCPPACKMOTORPOSITION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKOPERATION" EntityType="Self.DCPPACKOPERATION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKPENDENT" EntityType="Self.DCPPACKPENDENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKPRESSURESETTING" EntityType="Self.DCPPACKPRESSURESETTING" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKPT" EntityType="Self.DCPPACKPT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKQUANTITY" EntityType="Self.DCPPACKQUANTITY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKRESERVOIRSIZE" EntityType="Self.DCPPACKRESERVOIRSIZE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKSINGLEACTING" EntityType="Self.DCPPACKSINGLEACTING" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DCPPACKVOLTAGE" EntityType="Self.DCPPACKVOLTAGE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Equivalents" EntityType="Self.Equivalents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OPTIONALBODY" EntityType="Self.OPTIONALBODY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OPTIONALCOIL" EntityType="Self.OPTIONALCOIL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OPTIONALHIRSHMANLED" EntityType="Self.OPTIONALHIRSHMANLED" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CARTRIDGESProduct_CARTRIDGES" Association="Self.FK_CARTRIDGESProduct_CARTRIDGES">
+            <End Role="CARTRIDGES" EntitySet="CARTRIDGES" />
+            <End Role="CARTRIDGESProduct" EntitySet="CARTRIDGESProduct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARTRIDGESProductdetails_CARTRIDGES" Association="Self.FK_CARTRIDGESProductdetails_CARTRIDGES">
+            <End Role="CARTRIDGES" EntitySet="CARTRIDGES" />
+            <End Role="CARTRIDGESProductdetails" EntitySet="CARTRIDGESProductdetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OPTIONALBODY_CARTRIDGES" Association="Self.FK_OPTIONALBODY_CARTRIDGES">
+            <End Role="CARTRIDGES" EntitySet="CARTRIDGES" />
+            <End Role="OPTIONALBODY" EntitySet="OPTIONALBODY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OPTIONALCOIL_CARTRIDGES" Association="Self.FK_OPTIONALCOIL_CARTRIDGES">
+            <End Role="CARTRIDGES" EntitySet="CARTRIDGES" />
+            <End Role="OPTIONALCOIL" EntitySet="OPTIONALCOIL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OPTIONALHIRSHMANLED_CARTRIDGES" Association="Self.FK_OPTIONALHIRSHMANLED_CARTRIDGES">
+            <End Role="CARTRIDGES" EntitySet="CARTRIDGES" />
+            <End Role="OPTIONALHIRSHMANLED" EntitySet="OPTIONALHIRSHMANLED" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="winnerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ACPPACKDOUBLEACTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Firstimg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SecondImg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="tanksize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="width" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="length" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HEIGHT" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKDUTYCYCLE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DUTYCYCLE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKFLOWRATE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FLOWRATE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKFURTHERCOMMENT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FURTHERCOMMENTS" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKMOTORSIZE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MOTORSIZE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKOPERATION">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OPERATION" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKPENDENT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PENDENT" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKPOSITIONOFMOTOR">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="POSITIONOFMOTOR" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKPRESSURESETTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="PRESSURESETTING" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKPT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Firstimg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SecondImg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="tanksize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="width" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="length" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HEIGHT" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKQUANTITY">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QUANTITY" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKRESERVOIRSIZE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RESERVOIRSIZE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKSINGLEACTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Firstimg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SecondImg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="tanksize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="width" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="length" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HEIGHT" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKTYPEOFSYSTEM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TYPEOFSYSTEM" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ACPPACKVOLTAGE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VOLTAGE" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CARTRIDGE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="picurl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CARTRIDGESProducts" Relationship="Self.FK_CARTRIDGESProduct_CARTRIDGES" FromRole="CARTRIDGES" ToRole="CARTRIDGESProduct" />
+          <NavigationProperty Name="CARTRIDGESProductdetails" Relationship="Self.FK_CARTRIDGESProductdetails_CARTRIDGES" FromRole="CARTRIDGES" ToRole="CARTRIDGESProductdetails" />
+          <NavigationProperty Name="OPTIONALBODies" Relationship="Self.FK_OPTIONALBODY_CARTRIDGES" FromRole="CARTRIDGES" ToRole="OPTIONALBODY" />
+          <NavigationProperty Name="OPTIONALCOILs" Relationship="Self.FK_OPTIONALCOIL_CARTRIDGES" FromRole="CARTRIDGES" ToRole="OPTIONALCOIL" />
+          <NavigationProperty Name="OPTIONALHIRSHMANLEDs" Relationship="Self.FK_OPTIONALHIRSHMANLED_CARTRIDGES" FromRole="CARTRIDGES" ToRole="OPTIONALHIRSHMANLED" />
+        </EntityType>
+        <EntityType Name="CARTRIDGESProduct">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CARTRIDGESID" Type="Int32" />
+          <Property Name="productnumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="imgurl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="maxpressure" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="maxpressureunit" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="maxflow" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="cavitytooling" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="intallationtorque" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="intallationtorqueunit" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="weight" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="fluidtemp" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CARTRIDGE" Relationship="Self.FK_CARTRIDGESProduct_CARTRIDGES" FromRole="CARTRIDGESProduct" ToRole="CARTRIDGES" />
+        </EntityType>
+        <EntityType Name="CARTRIDGESProductdetail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CARTRIDGESID" Type="Int32" />
+          <Property Name="partno" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="cavity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Firstimg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="secondimg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="maxoprationgprussure" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ratedflow" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cavitytooling" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="installationtorque" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CRACKINGPRESSURE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CARTRIDGE" Relationship="Self.FK_CARTRIDGESProductdetails_CARTRIDGES" FromRole="CARTRIDGESProductdetails" ToRole="CARTRIDGES" />
+        </EntityType>
+        <EntityType Name="DCPPACK_SYSTEM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="System" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKCOMMENT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COMMENTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKDOUBLEEACTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Firstimg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SecondImg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="tanksize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="width" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="length" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Height" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HEAVYDUTYLENGTH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKFLOWRATE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FLOWRATE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKMOTOR_SIZE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sizes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKMOTORPOSITION">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MOTORPOSITION" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKOPERATION">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="opration" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKPENDENT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PENDENT" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKPRESSURESETTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PRESSURESETTING" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKPT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Firstimg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SecondImg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="tanksize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="width" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="length" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Height" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HEAVYDUTYLENGTH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKQUANTITY">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QUANTITY" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DCPPACKRESERVOIRSIZE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RESERVOIRSIZE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKSINGLEACTING">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Firstimg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SecondImg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="tanksize" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="width" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="length" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Height" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="HEAVYDUTYLENGTH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DCPPACKVOLTAGE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="voltage" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Equivalent">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sunmodelcode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="winnerModelcode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OPTIONALBODY">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CARTRIDGESID" Type="Int32" />
+          <Property Name="PARTNO" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MATERIAL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MAXPRESSURE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PRICE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Firstimg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="secondimg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="cavity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PORTSIZE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CARTRIDGE" Relationship="Self.FK_OPTIONALBODY_CARTRIDGES" FromRole="OPTIONALBODY" ToRole="CARTRIDGES" />
+        </EntityType>
+        <EntityType Name="OPTIONALCOIL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CARTRIDGESID" Type="Int32" />
+          <Property Name="voltage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="imgurl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CARTRIDGE" Relationship="Self.FK_OPTIONALCOIL_CARTRIDGES" FromRole="OPTIONALCOIL" ToRole="CARTRIDGES" />
+        </EntityType>
+        <EntityType Name="OPTIONALHIRSHMANLED">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CARTRIDGESID" Type="Int32" />
+          <Property Name="VISUAL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VOLTAGE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="imgurl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CARTRIDGE" Relationship="Self.FK_OPTIONALHIRSHMANLED_CARTRIDGES" FromRole="OPTIONALHIRSHMANLED" ToRole="CARTRIDGES" />
+        </EntityType>
+        <Association Name="FK_CARTRIDGESProduct_CARTRIDGES">
+          <End Role="CARTRIDGES" Type="Self.CARTRIDGE" Multiplicity="0..1" />
+          <End Role="CARTRIDGESProduct" Type="Self.CARTRIDGESProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARTRIDGES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CARTRIDGESProduct">
+              <PropertyRef Name="CARTRIDGESID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARTRIDGESProductdetails_CARTRIDGES">
+          <End Role="CARTRIDGES" Type="Self.CARTRIDGE" Multiplicity="0..1" />
+          <End Role="CARTRIDGESProductdetails" Type="Self.CARTRIDGESProductdetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARTRIDGES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CARTRIDGESProductdetails">
+              <PropertyRef Name="CARTRIDGESID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OPTIONALBODY_CARTRIDGES">
+          <End Role="CARTRIDGES" Type="Self.CARTRIDGE" Multiplicity="0..1" />
+          <End Role="OPTIONALBODY" Type="Self.OPTIONALBODY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARTRIDGES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OPTIONALBODY">
+              <PropertyRef Name="CARTRIDGESID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OPTIONALCOIL_CARTRIDGES">
+          <End Role="CARTRIDGES" Type="Self.CARTRIDGE" Multiplicity="0..1" />
+          <End Role="OPTIONALCOIL" Type="Self.OPTIONALCOIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARTRIDGES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OPTIONALCOIL">
+              <PropertyRef Name="CARTRIDGESID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OPTIONALHIRSHMANLED_CARTRIDGES">
+          <End Role="CARTRIDGES" Type="Self.CARTRIDGE" Multiplicity="0..1" />
+          <End Role="OPTIONALHIRSHMANLED" Type="Self.OPTIONALHIRSHMANLED" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARTRIDGES">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OPTIONALHIRSHMANLED">
+              <PropertyRef Name="CARTRIDGESID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="winnerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ACPPACKDOUBLEACTINGs" EntityType="Self.ACPPACKDOUBLEACTING" />
+          <EntitySet Name="ACPPACKDUTYCYCLEs" EntityType="Self.ACPPACKDUTYCYCLE" />
+          <EntitySet Name="ACPPACKFLOWRATEs" EntityType="Self.ACPPACKFLOWRATE" />
+          <EntitySet Name="ACPPACKFURTHERCOMMENTS" EntityType="Self.ACPPACKFURTHERCOMMENT" />
+          <EntitySet Name="ACPPACKMOTORSIZEs" EntityType="Self.ACPPACKMOTORSIZE" />
+          <EntitySet Name="ACPPACKOPERATIONs" EntityType="Self.ACPPACKOPERATION" />
+          <EntitySet Name="ACPPACKPENDENTs" EntityType="Self.ACPPACKPENDENT" />
+          <EntitySet Name="ACPPACKPOSITIONOFMOTORs" EntityType="Self.ACPPACKPOSITIONOFMOTOR" />
+          <EntitySet Name="ACPPACKPRESSURESETTINGs" EntityType="Self.ACPPACKPRESSURESETTING" />
+          <EntitySet Name="ACPPACKPTs" EntityType="Self.ACPPACKPT" />
+          <EntitySet Name="ACPPACKQUANTITies" EntityType="Self.ACPPACKQUANTITY" />
+          <EntitySet Name="ACPPACKRESERVOIRSIZEs" EntityType="Self.ACPPACKRESERVOIRSIZE" />
+          <EntitySet Name="ACPPACKSINGLEACTINGs" EntityType="Self.ACPPACKSINGLEACTING" />
+          <EntitySet Name="ACPPACKTYPEOFSYSTEMs" EntityType="Self.ACPPACKTYPEOFSYSTEM" />
+          <EntitySet Name="ACPPACKVOLTAGEs" EntityType="Self.ACPPACKVOLTAGE" />
+          <EntitySet Name="CARTRIDGES" EntityType="Self.CARTRIDGE" />
+          <EntitySet Name="CARTRIDGESProducts" EntityType="Self.CARTRIDGESProduct" />
+          <EntitySet Name="CARTRIDGESProductdetails" EntityType="Self.CARTRIDGESProductdetail" />
+          <EntitySet Name="DCPPACK_SYSTEMs" EntityType="Self.DCPPACK_SYSTEM" />
+          <EntitySet Name="DCPPACKCOMMENTS" EntityType="Self.DCPPACKCOMMENT" />
+          <EntitySet Name="DCPPACKDOUBLEEACTINGs" EntityType="Self.DCPPACKDOUBLEEACTING" />
+          <EntitySet Name="DCPPACKFLOWRATEs" EntityType="Self.DCPPACKFLOWRATE" />
+          <EntitySet Name="DCPPACKMOTOR_SIZEs" EntityType="Self.DCPPACKMOTOR_SIZE" />
+          <EntitySet Name="DCPPACKMOTORPOSITIONs" EntityType="Self.DCPPACKMOTORPOSITION" />
+          <EntitySet Name="DCPPACKOPERATIONs" EntityType="Self.DCPPACKOPERATION" />
+          <EntitySet Name="DCPPACKPENDENTs" EntityType="Self.DCPPACKPENDENT" />
+          <EntitySet Name="DCPPACKPRESSURESETTINGs" EntityType="Self.DCPPACKPRESSURESETTING" />
+          <EntitySet Name="DCPPACKPTs" EntityType="Self.DCPPACKPT" />
+          <EntitySet Name="DCPPACKQUANTITies" EntityType="Self.DCPPACKQUANTITY" />
+          <EntitySet Name="DCPPACKRESERVOIRSIZEs" EntityType="Self.DCPPACKRESERVOIRSIZE" />
+          <EntitySet Name="DCPPACKSINGLEACTINGs" EntityType="Self.DCPPACKSINGLEACTING" />
+          <EntitySet Name="DCPPACKVOLTAGEs" EntityType="Self.DCPPACKVOLTAGE" />
+          <EntitySet Name="Equivalents" EntityType="Self.Equivalent" />
+          <EntitySet Name="OPTIONALBODies" EntityType="Self.OPTIONALBODY" />
+          <EntitySet Name="OPTIONALCOILs" EntityType="Self.OPTIONALCOIL" />
+          <EntitySet Name="OPTIONALHIRSHMANLEDs" EntityType="Self.OPTIONALHIRSHMANLED" />
+          <AssociationSet Name="FK_CARTRIDGESProduct_CARTRIDGES" Association="Self.FK_CARTRIDGESProduct_CARTRIDGES">
+            <End Role="CARTRIDGES" EntitySet="CARTRIDGES" />
+            <End Role="CARTRIDGESProduct" EntitySet="CARTRIDGESProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARTRIDGESProductdetails_CARTRIDGES" Association="Self.FK_CARTRIDGESProductdetails_CARTRIDGES">
+            <End Role="CARTRIDGES" EntitySet="CARTRIDGES" />
+            <End Role="CARTRIDGESProductdetails" EntitySet="CARTRIDGESProductdetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OPTIONALBODY_CARTRIDGES" Association="Self.FK_OPTIONALBODY_CARTRIDGES">
+            <End Role="CARTRIDGES" EntitySet="CARTRIDGES" />
+            <End Role="OPTIONALBODY" EntitySet="OPTIONALBODies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OPTIONALCOIL_CARTRIDGES" Association="Self.FK_OPTIONALCOIL_CARTRIDGES">
+            <End Role="CARTRIDGES" EntitySet="CARTRIDGES" />
+            <End Role="OPTIONALCOIL" EntitySet="OPTIONALCOILs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OPTIONALHIRSHMANLED_CARTRIDGES" Association="Self.FK_OPTIONALHIRSHMANLED_CARTRIDGES">
+            <End Role="CARTRIDGES" EntitySet="CARTRIDGES" />
+            <End Role="OPTIONALHIRSHMANLED" EntitySet="OPTIONALHIRSHMANLEDs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="winnerModelStoreContainer" CdmEntityContainer="winnerEntities">
+          <EntitySetMapping Name="ACPPACKDOUBLEACTINGs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKDOUBLEACTING">
+              <MappingFragment StoreEntitySet="ACPPACKDOUBLEACTING">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Firstimg" ColumnName="Firstimg" />
+                <ScalarProperty Name="SecondImg" ColumnName="SecondImg" />
+                <ScalarProperty Name="tanksize" ColumnName="tanksize" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="length" ColumnName="length" />
+                <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKDUTYCYCLEs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKDUTYCYCLE">
+              <MappingFragment StoreEntitySet="ACPPACKDUTYCYCLE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="DUTYCYCLE" ColumnName="DUTYCYCLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKFLOWRATEs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKFLOWRATE">
+              <MappingFragment StoreEntitySet="ACPPACKFLOWRATE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="FLOWRATE" ColumnName="FLOWRATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKFURTHERCOMMENTS">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKFURTHERCOMMENT">
+              <MappingFragment StoreEntitySet="ACPPACKFURTHERCOMMENTS">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="FURTHERCOMMENTS" ColumnName="FURTHERCOMMENTS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKMOTORSIZEs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKMOTORSIZE">
+              <MappingFragment StoreEntitySet="ACPPACKMOTORSIZE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="MOTORSIZE" ColumnName="MOTORSIZE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKOPERATIONs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKOPERATION">
+              <MappingFragment StoreEntitySet="ACPPACKOPERATION">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="OPERATION" ColumnName="OPERATION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKPENDENTs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKPENDENT">
+              <MappingFragment StoreEntitySet="ACPPACKPENDENT">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="PENDENT" ColumnName="PENDENT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKPOSITIONOFMOTORs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKPOSITIONOFMOTOR">
+              <MappingFragment StoreEntitySet="ACPPACKPOSITIONOFMOTOR">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="POSITIONOFMOTOR" ColumnName="POSITIONOFMOTOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKPRESSURESETTINGs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKPRESSURESETTING">
+              <MappingFragment StoreEntitySet="ACPPACKPRESSURESETTING">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="PRESSURESETTING" ColumnName="PRESSURESETTING" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKPTs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKPT">
+              <MappingFragment StoreEntitySet="ACPPACKPT">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Firstimg" ColumnName="Firstimg" />
+                <ScalarProperty Name="SecondImg" ColumnName="SecondImg" />
+                <ScalarProperty Name="tanksize" ColumnName="tanksize" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="length" ColumnName="length" />
+                <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKQUANTITies">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKQUANTITY">
+              <MappingFragment StoreEntitySet="ACPPACKQUANTITY">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKRESERVOIRSIZEs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKRESERVOIRSIZE">
+              <MappingFragment StoreEntitySet="ACPPACKRESERVOIRSIZE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="RESERVOIRSIZE" ColumnName="RESERVOIRSIZE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKSINGLEACTINGs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKSINGLEACTING">
+              <MappingFragment StoreEntitySet="ACPPACKSINGLEACTING">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Firstimg" ColumnName="Firstimg" />
+                <ScalarProperty Name="SecondImg" ColumnName="SecondImg" />
+                <ScalarProperty Name="tanksize" ColumnName="tanksize" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="length" ColumnName="length" />
+                <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKTYPEOFSYSTEMs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKTYPEOFSYSTEM">
+              <MappingFragment StoreEntitySet="ACPPACKTYPEOFSYSTEM">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="TYPEOFSYSTEM" ColumnName="TYPEOFSYSTEM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ACPPACKVOLTAGEs">
+            <EntityTypeMapping TypeName="winnerModel.ACPPACKVOLTAGE">
+              <MappingFragment StoreEntitySet="ACPPACKVOLTAGE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="VOLTAGE" ColumnName="VOLTAGE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARTRIDGES">
+            <EntityTypeMapping TypeName="winnerModel.CARTRIDGE">
+              <MappingFragment StoreEntitySet="CARTRIDGES">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="picurl" ColumnName="picurl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARTRIDGESProducts">
+            <EntityTypeMapping TypeName="winnerModel.CARTRIDGESProduct">
+              <MappingFragment StoreEntitySet="CARTRIDGESProduct">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CARTRIDGESID" ColumnName="CARTRIDGESID" />
+                <ScalarProperty Name="productnumber" ColumnName="productnumber" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="imgurl" ColumnName="imgurl" />
+                <ScalarProperty Name="maxpressure" ColumnName="maxpressure" />
+                <ScalarProperty Name="maxpressureunit" ColumnName="maxpressureunit" />
+                <ScalarProperty Name="maxflow" ColumnName="maxflow" />
+                <ScalarProperty Name="cavitytooling" ColumnName="cavitytooling" />
+                <ScalarProperty Name="intallationtorque" ColumnName="intallationtorque" />
+                <ScalarProperty Name="intallationtorqueunit" ColumnName="intallationtorqueunit" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="fluidtemp" ColumnName="fluidtemp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARTRIDGESProductdetails">
+            <EntityTypeMapping TypeName="winnerModel.CARTRIDGESProductdetail">
+              <MappingFragment StoreEntitySet="CARTRIDGESProductdetails">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CARTRIDGESID" ColumnName="CARTRIDGESID" />
+                <ScalarProperty Name="partno" ColumnName="partno" />
+                <ScalarProperty Name="cavity" ColumnName="cavity" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="Firstimg" ColumnName="Firstimg" />
+                <ScalarProperty Name="secondimg" ColumnName="secondimg" />
+                <ScalarProperty Name="maxoprationgprussure" ColumnName="maxoprationgprussure" />
+                <ScalarProperty Name="ratedflow" ColumnName="ratedflow" />
+                <ScalarProperty Name="cavitytooling" ColumnName="cavitytooling" />
+                <ScalarProperty Name="installationtorque" ColumnName="installationtorque" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="CRACKINGPRESSURE" ColumnName="CRACKINGPRESSURE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACK_SYSTEMs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACK_SYSTEM">
+              <MappingFragment StoreEntitySet="DCPPACK SYSTEM">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="System" ColumnName="System" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKCOMMENTS">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKCOMMENT">
+              <MappingFragment StoreEntitySet="DCPPACKCOMMENTS">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKDOUBLEEACTINGs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKDOUBLEEACTING">
+              <MappingFragment StoreEntitySet="DCPPACKDOUBLEEACTING">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Firstimg" ColumnName="Firstimg" />
+                <ScalarProperty Name="SecondImg" ColumnName="SecondImg" />
+                <ScalarProperty Name="tanksize" ColumnName="tanksize" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="length" ColumnName="length" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="HEAVYDUTYLENGTH" ColumnName="HEAVYDUTYLENGTH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKFLOWRATEs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKFLOWRATE">
+              <MappingFragment StoreEntitySet="DCPPACKFLOWRATE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="FLOWRATE" ColumnName="FLOWRATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKMOTOR_SIZEs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKMOTOR_SIZE">
+              <MappingFragment StoreEntitySet="DCPPACKMOTOR SIZE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sizes" ColumnName="sizes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKMOTORPOSITIONs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKMOTORPOSITION">
+              <MappingFragment StoreEntitySet="DCPPACKMOTORPOSITION">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="MOTORPOSITION" ColumnName="MOTORPOSITION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKOPERATIONs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKOPERATION">
+              <MappingFragment StoreEntitySet="DCPPACKOPERATION">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="opration" ColumnName="opration" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKPENDENTs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKPENDENT">
+              <MappingFragment StoreEntitySet="DCPPACKPENDENT">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="PENDENT" ColumnName="PENDENT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKPRESSURESETTINGs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKPRESSURESETTING">
+              <MappingFragment StoreEntitySet="DCPPACKPRESSURESETTING">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="PRESSURESETTING" ColumnName="PRESSURESETTING" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKPTs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKPT">
+              <MappingFragment StoreEntitySet="DCPPACKPT">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Firstimg" ColumnName="Firstimg" />
+                <ScalarProperty Name="SecondImg" ColumnName="SecondImg" />
+                <ScalarProperty Name="tanksize" ColumnName="tanksize" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="length" ColumnName="length" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="HEAVYDUTYLENGTH" ColumnName="HEAVYDUTYLENGTH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKQUANTITies">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKQUANTITY">
+              <MappingFragment StoreEntitySet="DCPPACKQUANTITY">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKRESERVOIRSIZEs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKRESERVOIRSIZE">
+              <MappingFragment StoreEntitySet="DCPPACKRESERVOIRSIZE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="RESERVOIRSIZE" ColumnName="RESERVOIRSIZE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKSINGLEACTINGs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKSINGLEACTING">
+              <MappingFragment StoreEntitySet="DCPPACKSINGLEACTING">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Firstimg" ColumnName="Firstimg" />
+                <ScalarProperty Name="SecondImg" ColumnName="SecondImg" />
+                <ScalarProperty Name="tanksize" ColumnName="tanksize" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="length" ColumnName="length" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="HEAVYDUTYLENGTH" ColumnName="HEAVYDUTYLENGTH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DCPPACKVOLTAGEs">
+            <EntityTypeMapping TypeName="winnerModel.DCPPACKVOLTAGE">
+              <MappingFragment StoreEntitySet="DCPPACKVOLTAGE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="voltage" ColumnName="voltage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Equivalents">
+            <EntityTypeMapping TypeName="winnerModel.Equivalent">
+              <MappingFragment StoreEntitySet="Equivalents">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sunmodelcode" ColumnName="sunmodelcode" />
+                <ScalarProperty Name="winnerModelcode" ColumnName="winnerModelcode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OPTIONALBODies">
+            <EntityTypeMapping TypeName="winnerModel.OPTIONALBODY">
+              <MappingFragment StoreEntitySet="OPTIONALBODY">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CARTRIDGESID" ColumnName="CARTRIDGESID" />
+                <ScalarProperty Name="PARTNO" ColumnName="PARTNO" />
+                <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+                <ScalarProperty Name="MAXPRESSURE" ColumnName="MAXPRESSURE" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="Firstimg" ColumnName="Firstimg" />
+                <ScalarProperty Name="secondimg" ColumnName="secondimg" />
+                <ScalarProperty Name="cavity" ColumnName="cavity" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="PORTSIZE" ColumnName="PORTSIZE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OPTIONALCOILs">
+            <EntityTypeMapping TypeName="winnerModel.OPTIONALCOIL">
+              <MappingFragment StoreEntitySet="OPTIONALCOIL">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CARTRIDGESID" ColumnName="CARTRIDGESID" />
+                <ScalarProperty Name="voltage" ColumnName="voltage" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="imgurl" ColumnName="imgurl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OPTIONALHIRSHMANLEDs">
+            <EntityTypeMapping TypeName="winnerModel.OPTIONALHIRSHMANLED">
+              <MappingFragment StoreEntitySet="OPTIONALHIRSHMANLED">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CARTRIDGESID" ColumnName="CARTRIDGESID" />
+                <ScalarProperty Name="VISUAL" ColumnName="VISUAL" />
+                <ScalarProperty Name="VOLTAGE" ColumnName="VOLTAGE" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="imgurl" ColumnName="imgurl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

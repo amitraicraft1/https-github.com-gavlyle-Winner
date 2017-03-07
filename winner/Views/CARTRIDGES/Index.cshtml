@@ -1,0 +1,160 @@
+﻿@model List<winner.Db.CARTRIDGE>
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .circle {
+        border: solid 1px #E7001B;
+        padding: 5px;
+        margin: 15px;
+        /*width:150px;
+          height:150px;
+          border-radius:100px;*/
+    }
+    .CARTRIDGES
+    {
+        text-align:center;
+    }
+    .intro img {
+        vertical-align: text-bottom;
+    }
+    .name{
+       display: block;
+    left: 0;
+    padding: 10px 5px;
+    position: absolute;
+    right: 0;
+    }
+</style>
+
+<section class="site-section site-section-light site-section-top " style="color:#E60000;">
+    <div class="container">
+        <h1 class="text-center animation-slideDown "><strong>SELECT WHICH PRODUCT YOU ARE INTERESTED IN</strong></h1>
+
+@*style="margin-bottom:100px;float:left;width:100%">*@
+        <div class="row row-items text-center">
+
+            @{
+             
+
+                foreach (var item in Model)
+                {
+
+                    <div class=" CARTRIDGES col-sm-4 col-md-3">
+                        <a href="/CARTRIDGES/details/@item.id" class=" intro  animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                            <img src="@item.picurl" class="circle  img-responsive" alt="Promo Image 1">
+                            <div class="name">@item.Name</div>
+                        </a>
+                    </div>
+
+
+                  
+                  
+                }
+
+
+
+
+            }
+        </div>
+
+
+
+
+
+@*<div class=" text-center animation-fadeIn" style="margin-bottom:100px;float:left;width:100%">
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro  animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/DOUBLE_SOLENOID_CHECK- 2_POSITION_NORMALLY_OPEN.png" class="circle  img-responsive" alt="Promo Image 1">
+                <div> DOUBLE SOLENOID CHECK- 2 POSITION NORMALLY OPEN</div>
+            </a>
+        </div>
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/DOUBLE_SOLENOID_CHECK- 2_POSITON_NORMALLY_CLOSED.png" class="circle  img-responsive" alt="Promo Image 1">
+                <div> DOUBLE SOLENOID CHECK- 2 POSITON NORMALLY CLOSED</div>
+            </a>
+        </div>
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro  animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/RELIEFVALVES.png" class="circle img-responsive" alt="Promo Image 1">
+                <div> RELIEF VALVES</div>
+            </a>
+        </div>
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro  animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/PRESSURE_REDUCING_VALVE.png" class="circle img-responsive" alt="Promo Image 1">
+                <div> PRESSURE REDUCING VALVE</div>
+            </a>
+        </div>
+
+
+
+
+    </div>
+    <div class=" text-center animation-fadeIn" style="margin-bottom:100px;float:left;width:100%">
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro  animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/BLANKING_PLATES.png" class="circle  img-responsive" alt="Promo Image 1">
+                <div> BLANKING PLATES</div>
+            </a>
+        </div>
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/COUNTERBALANCE_VALVES.png" class="circle  img-responsive" alt="Promo Image 1">
+                <div> COUNTERBALANCE VALVES</div>
+            </a>
+        </div>
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro  animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/NEEDLEVALVES.png" class="circle img-responsive" alt="Promo Image 1">
+                <div> NEEDLE VALVES</div>
+            </a>
+        </div>
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro  animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/SEQUENCEVALVES.png" class="circle img-responsive" alt="Promo Image 1">
+                <div> SEQUENCE VALVES</div>
+            </a>
+        </div>
+
+
+
+
+    </div>
+    <div class=" text-center animation-fadeIn" style="margin-bottom:100px;float:left;width:100%">
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro  animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/SPARELINEVALVEBODIES.png" class="circle  img-responsive" alt="Promo Image 1">
+                <div> SPARE LINE VALVE BODIES</div>
+            </a>
+        </div>
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/COILS&LED.png" class="circle  img-responsive" alt="Promo Image 1">
+                <div> COILS & LED</div>
+            </a>
+        </div>
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro  animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/HOSE_BURST_VALVES.png" class="circle img-responsive" alt="Promo Image 1">
+                <div> HOSE BURST VALVES</div>
+            </a>
+        </div>
+        <div class=" col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <a href="javascript:void(0)" class=" intro  animation-fadeIn360" data-toggle="animation-appear" data-animation-class="animation-fadeIn360" data-element-offset="-100">
+                <img src="/images/CARTRIDGES/3_WAY_2_POSITION_CARTRIDGES.png" class="circle img-responsive" alt="Promo Image 1">
+                <div> 3 WAY 2 POSITION CARTRIDGES</div>
+            </a>
+        </div>
+
+
+
+
+    </div>*@
+</div>
+</div>
+
+
+
+</section>

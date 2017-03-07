@@ -1,0 +1,425 @@
+﻿@model  winner.Models.ProductdetailsModel
+@{
+    ViewBag.Title = "Productdetails";
+}
+
+<style>
+    .thumbnail {
+        border: solid 1px #EF0111;
+    }
+
+    .table-bordered {
+        border: solid 1px #EF0111;
+        margin-bottom:5px;
+    }
+
+    .bootstrap-select {
+        width: 100% !important;
+        /*background-color: #EF0111;
+              color:#fff;*/
+    }
+
+    input {
+        width: 100% !important;
+    }
+    .thumbnail img
+    {
+        /*width:100%;*/
+      
+    }
+    .thumbnail {
+        /*min-height: 750px;*/
+        margin:15px;
+         
+    }
+    .HIRSHMAN
+    {
+       margin:0px auto;
+       float:none;
+    }
+    .OPTIONALBODY
+    {
+              margin:0px auto;
+              float:none;
+    }
+    .OPTIONALCOIL
+    {
+              margin:0px auto;
+              float:none;
+    }
+    .Productdetails
+    {
+               margin:0px auto;
+               float:none;
+    }
+</style>
+<section class="site-section site-section-light site-section-top " style="color:#000;">
+
+    <h4 class="text-center">
+        @ViewBag.name
+       
+        
+
+    </h4>
+    <div class="text-center">
+        @using (Html.BeginForm("Productdetails", "CARTRIDGES", new { partno = Request.QueryString["partno"], CARTRIDGESID=Request.QueryString["CARTRIDGESID"] }, FormMethod.Post))
+{
+
+            @Html.HiddenFor(m=>m.CARTRIDGESID,new {@id= "CARTRIDGESID",value= Request.QueryString["CARTRIDGESID"].ToString() })
+            @Html.HiddenFor(m => m.partno, new { @id = "partno", value = Request.QueryString["partno"].ToString() })
+            <div class="text-center">
+                <div class="form-group" style="width:250px;margin:0px auto">
+                    <label for="exampleInputEmail1">Enter Email</label>
+                    <input type="text" id="Email" name="Email" class="form-control" placeholder="Email">
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group" style="width:250px;margin:0px auto">
+               
+                    <div class="form-group text-center">
+                        <label for="exampleInputEmail1">FURTHER COMMENTS</label>
+                       
+                            <textarea name="Message" class="form-control" id="Message"></textarea>
+                        
+                        
+                    </div>
+                    <button type="submit" class="btn button "> Make An Enquiry </button>
+                    
+
+                </div>
+                </div>
+        }
+            <div class="row ">
+
+
+                @{
+            int countProductdetail = (new System.Collections.Generic.List<winner.Db.CARTRIDGESProductdetail>(ViewBag.CARTRIDGESProductdetails as System.Collections.Generic.List<winner.Db.CARTRIDGESProductdetail>)).Count;
+            if (countProductdetail > 0)
+            {
+                <div class=" Productdetails  col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                    <div class="thumbnail text-center">
+                        @foreach (var item in ViewBag.CARTRIDGESProducts)
+                        {
+                            <h4 class="text-center">
+                                @item.name
+
+                            </h4>
+                        }
+                        <div id="no-more-tables">
+                            <table class="col-md-12 table-bordered table-striped table-condensed cf">
+                                <thead class="cf">
+                                    <tr>
+                                        <th>
+                                            PART NO.
+                                        </th>
+                                        <th>
+                                            CAVITY
+                                        </th>
+                                        @*<th class="numeric">
+                                            PRICE
+                                        </th>*@
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in ViewBag.CARTRIDGESProductdetails)
+                                    {
+                                        <tr>
+                                            <td data-title="Code">@item.partno </td>
+                                            <td data-title="Company">@item.cavity MM</td>
+                                            @*<td data-title="Price" class="numeric"> $ @item.price </td>*@
+
+
+
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+
+                            <div class="row">
+
+                                @foreach (var item in ViewBag.CARTRIDGESProductdetails)
+                                {
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6 colo-xs-12"><img class="img-responsive" src="@item.Firstimg" /></div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 colo-xs-12">
+                                        <img src="@item.secondimg" />
+                                        <div class="row">
+                                            <p class="group inner list-group-item-text text-center">
+                                                <h3 class="group inner list-group-item-heading text-center">Technical Data</h3>
+
+                                                <div class="col-xs-6 col-md-6">
+                                                    Max. Pressure
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    @item.maxoprationgprussure bar
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    Max. Flow
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    @item.ratedflow l/min
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    Cavity-Tooling
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    @item.cavitytooling
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    Installation torque
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    @item.installationtorque Nm
+                                                </div>
+
+                                                <div class="col-xs-6 col-md-6">
+                                                    Weight
+                                                </div>
+                                                <div class="col-xs-6 col-md-6">
+                                                    @item.weight Kg
+                                                </div>
+
+
+                                            </p>
+                                        </div>
+                                        @*<div class="row">
+
+                                                <div class="col-xs-12 col-md-12 text-center">
+                                                    <a class="btn  button" href="@Url.Action("productdetails", "CARTRIDGES", new { partno = @item.productnumber, CARTRIDGESID=@item.CARTRIDGESID })">Details</a>
+                                                </div>
+                                            </div>*@
+                                    </div>
+                                }
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            }
+                }
+                @{
+                    int OPTIONALCOILcounter = 1;
+            int count = (new System.Collections.Generic.List<winner.Db.OPTIONALCOIL>(ViewBag.OPTIONALCOIL as System.Collections.Generic.List<winner.Db.OPTIONALCOIL>)).Count;
+            if (count > 0)
+            {
+                <div class="OPTIONALCOIL col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                    <div class="thumbnail text-center">
+                        <h4 class="text-center">OPTIONAL COIL</h4>
+                        <table class="col-md-12 table-bordered table-striped table-condensed cf">
+                            <thead class="cf">
+                                <tr>
+                                    <th>
+                                        Voltage
+                                    </th>
+                                    @*<th>
+                                        Price
+                                    </th>*@
+                                   
+
+                                </tr>
+                            </thead>
+                           
+                            <tbody>
+                                @foreach (var item in ViewBag.OPTIONALCOIL)
+                                {
+                                    <tr>
+                                        <td data-title="Code">@item.voltage </td>
+                                        @*<td data-title="Company">@item.price MM</td>*@
+                                        
+
+
+
+                                    </tr>
+                                }
+
+
+
+
+                            </tbody>
+                        </table>
+                        @foreach (var item in ViewBag.OPTIONALCOIL)
+                        {
+                            if (OPTIONALCOILcounter == 1)
+                            {
+                                <div><img src="@item.imgurl" /></div>
+                            }
+
+                            OPTIONALCOILcounter++;
+                        }
+                    </div>
+                </div>
+            }
+                }
+            </div>
+            <div class="row ">
+                @{
+            int i = 1;
+            int countbody = (new System.Collections.Generic.List<winner.Db.OPTIONALBODY>(ViewBag.OPTIONALBODY as System.Collections.Generic.List<winner.Db.OPTIONALBODY>)).Count;
+            if (countbody > 0)
+            {
+                <div class="OPTIONALBODY col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                    <div class="thumbnail text-center">
+                        <h4 class="text-center">OPTIONAL BODY</h4>
+
+
+                        <table class="col-md-12 table-bordered table-striped table-condensed cf">
+                            <thead class="cf">
+                                <tr>
+                                    <th>
+                                        PART NO.
+                                    </th>
+                                    <th>
+                                        CAVITY
+                                    </th>
+                                    @*<th class="numeric">
+                                        PRICE
+                                    </th>*@
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in ViewBag.OPTIONALBODY)
+                            {
+                                    <tr>
+                                        <td data-title="Code">@item.PARTNO </td>
+                                        <td data-title="Company">@item.cavity MM</td>
+                                        @*<td data-title="Price" class="numeric"> $ @item.PRICE </td>*@
+
+
+
+                                    </tr>
+                            }
+
+
+                            </tbody>
+                        </table>
+
+                        <div class="row">
+
+                            @foreach (var item in ViewBag.OPTIONALBODY)
+                        {
+                            if (i == 1)
+                            {
+
+                                <div class="col-lg-6 col-md-6 col-sm-6 colo-xs-12"><img class="img-responsive" src="@item.Firstimg" /></div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 colo-xs-12">
+                                    <img src="@item.secondimg" />
+                                    <div class="row">
+                                        <p class="group inner list-group-item-text text-center">
+                                            <h3 class="group inner list-group-item-heading text-center">Technical Data</h3>
+
+                                            <div class="col-xs-6 col-md-6">
+                                                Max. Pressure
+                                            </div>
+                                            <div class="col-xs-6 col-md-6">
+                                                @item.MAXPRESSURE bar
+                                            </div>
+
+                                            <div class="col-xs-6 col-md-6">
+                                                Cavity-Tooling
+                                            </div>
+                                            <div class="col-xs-6 col-md-6">
+                                                @item.cavity
+                                            </div>
+                                            <div class="col-xs-6 col-md-6">
+                                                @item.MATERIAL
+                                            </div>
+                                            <div class="col-xs-6 col-md-6">
+                                                @item.weight Kg
+                                            </div>
+
+
+
+                                        </p>
+                                    </div>
+                                    @*<div class="row">
+
+                                            <div class="col-xs-12 col-md-12 text-center">
+                                                <a class="btn  button" href="@Url.Action("productdetails", "CARTRIDGES", new { partno = @item.productnumber, CARTRIDGESID=@item.CARTRIDGESID })">Details</a>
+                                            </div>
+                                        </div>*@
+                                </div>
+                            }
+                            i++;
+                        }
+
+                        </div>
+                    </div>
+                </div>
+            }
+                }
+
+
+                @{
+                    int HIRSHMANcounter = 1;
+            int countHIRSHMAN = (new System.Collections.Generic.List<winner.Db.OPTIONALHIRSHMANLED>(ViewBag.OPTIONALHIRSHMANLED as System.Collections.Generic.List<winner.Db.OPTIONALHIRSHMANLED>)).Count;
+            if (countHIRSHMAN > 0)
+            {
+                <div class=" HIRSHMAN col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                    <div class="thumbnail text-center">
+                        <h4 class="text-center">OPTIONAL HIRSHMAN LED/RECTIFIER</h4>
+                        <table class="col-md-12 table-bordered table-striped table-condensed cf">
+                            <thead class="cf">
+                                <tr>
+                                    <th>VISUAL</th>
+                                    <th>
+                                        VOLTAGE
+                                    </th>
+                                    @*<th>
+                                        Price
+                                    </th>*@
+
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in ViewBag.OPTIONALHIRSHMANLED)
+                                {
+                                    <tr>
+                                        <td data-title="Code">@item.VISUAL </td>
+                                        <td data-title="Code">@item.VOLTAGE </td>
+                                        @*<td data-title="Company">$ @item.price</td>*@
+
+
+
+
+                                    </tr>
+                                }
+
+
+
+
+                            </tbody>
+                        </table>
+                        @foreach (var item in ViewBag.OPTIONALHIRSHMANLED)
+                        {
+                            if (HIRSHMANcounter == 1)
+                            {
+                                <div><img src="@item.imgurl" /></div>
+                            }
+
+                            HIRSHMANcounter++;
+                        }
+                    </div>
+                </div>
+            }
+                }
+            </div>
+
+
+</section>
+<script>
+   
+    var l = $(".row").children().hasClass("HIRSHMAN").toString();
+</script>

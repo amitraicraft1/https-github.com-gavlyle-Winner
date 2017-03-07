@@ -1,0 +1,263 @@
+﻿@model winner.Models.AcEnquiryModel
+@{
+    ViewBag.Title = "AcEnquiry";
+}
+
+<style>
+    .thumbnail {
+        border: solid 1px #EF0111;
+    }
+
+    .table-bordered {
+        border: solid 1px #EF0111;
+    }
+
+    .bootstrap-select {
+        width: 150px !important;
+        /*background-color: #EF0111;
+              color:#fff;*/
+    }
+
+    input {
+        width: 150px !important;
+    }
+</style>
+
+<section class="site-section site-section-light site-section-top " style="color:#000;">
+@using (Html.BeginForm("AcEnquiry", "Package", FormMethod.Post))
+{ 
+    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+        <div class="thumbnail text-center">
+            <h6>Opration</h6>
+            <select id="Opration" name="Opration" class="selectpicker ">
+                @foreach (var item in ViewBag.Opration)
+                {
+                    <option>@item.OPERATION</option>
+                }
+                </select>
+                <h6>MOTOR SIZE</h6>
+            <select id="MotorSize" name="MotorSize" class="selectpicker ">
+                @foreach (var item in ViewBag.MOTORSIZE)
+                {
+                    <option>@item.MOTORSIZE</option>
+                }
+            </select>
+
+                <h6>VOLTAGE</h6>
+            <select id="VOLTAGE" name="VOLTAGE" class="selectpicker ">
+                @foreach (var item in ViewBag.VOLTAGE)
+                {
+                    <option>@item.VOLTAGE</option>
+                }
+            </select>
+
+                <h6>DUTYCYCLE</h6>
+            <select id="DUTYCYCLE" name="DUTYCYCLE" class="selectpicker ">
+                @foreach (var item in ViewBag.DUTYCYCLE)
+                {
+                    <option>@item.DUTYCYCLE</option>
+                }
+            </select>
+
+                <h6>FLOW RATE</h6>
+            <select id="FLOWRATE" name="FLOWRATE" class="selectpicker ">
+                @foreach (var item in ViewBag.FLOWRATE)
+                {
+                    <option>@item.FLOWRATE</option>
+                }
+            </select>
+
+                <h6>PRESSURE SETTING</h6>
+            <select id="PRESSURESETTING" name="PRESSURESETTING" class="selectpicker ">
+                @foreach (var item in ViewBag.PRESSURESETTING)
+                {
+                    <option>@item.PRESSURESETTING</option>
+                }
+            </select>
+
+                <h6>TYPE OF SYSTEM TO OPERATE</h6>
+            <select id="TYPEOFSYSTEM" name="TYPEOFSYSTEM" class="selectpicker ">
+                @foreach (var item in ViewBag.TYPEOFSYSTEMTOOPERATE)
+                {
+                    <option>@item.System</option>
+                }
+            </select>
+
+                <h6>RESERVOIR SIZE</h6>
+            <select id="RESERVOIRSIZE" name="RESERVOIRSIZE" class="selectpicker ">
+                @foreach (var item in ViewBag.RESERVOIR)
+                {
+                    <option>@item.RESERVOIRSIZE</option>
+                }
+            </select>
+
+                <h6>POSITION OF MOTOR/PUMP</h6>
+            <select id="POSITIONOFMOTOR" name="POSITIONOFMOTOR" class="selectpicker ">
+                @foreach (var item in ViewBag.POSITIONOFMOTOR)
+                {
+                    <option>@item.POSITIONOFMOTOR</option>
+                }
+            </select>
+
+                <h6>PENDENT</h6>
+            <select id="PENDENT" name="PENDENT" class="selectpicker ">
+                @foreach (var item in ViewBag.PENDENT)
+                {
+                    <option>@item.PENDENT</option>
+                }
+            </select>
+            <h6>
+                Enter Email
+            </h6>
+          
+            <div class="selectpicker">
+                <input type="text" id="Email" name="Email"  style="font-size: 13px;padding: 6px 8px;max-width: 100%;margin: 1px 0;color: #353535;border-color: #dddddd; border-radius:5px" placeholder="Email">
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+                <h6>FURTHER COMMENTS</h6>
+                <div class="form-group text-center">
+                    <div class="text-center">
+                        <textarea name="COMMENTS" class="form-control" id="COMMENTS"></textarea>
+                    </div>
+                </div>
+                <div class="text-center">
+
+                    <button type="submit" class="btn button "> Make An Enquiry </button>
+
+                </div>
+</div>
+    </div>
+}
+    <div class="col-md-9 col-lg-9 col-sm-6 col-xs-12">
+        <div class=" text-center">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-center">
+                        DESIGN YOUR OWN CUSTOM BUILT DC POWER PACK
+                    </h4>
+                    <h4 class="text-center">
+                        SINGLE ACTING
+                    </h4>
+
+                </div>
+                <div id="no-more-tables">
+                    <table class="col-md-12 table-bordered table-striped table-condensed cf">
+                        <thead class="cf">
+                            <tr>
+                                <th>TANK SIZE</th>
+                                <th>WIDTH</th>
+                                <th class="numeric">LENGTH</th>
+                                <th class="numeric">HEIGHT</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.singleact)
+                            {
+                                <tr>
+                                    <td data-title="Code">@item.tanksize L</td>
+                                    <td data-title="Company">@item.width MM</td>
+                                    <td data-title="Price" class="numeric">@item.length MM</td>
+                                    <td data-title="Change" class="numeric">@item.HEIGHT MM</td>
+                                    
+
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class=" text-center">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-center">
+                        DOUBLE ACTING
+
+                    </h4>
+
+                </div>
+                <div id="no-more-tables">
+                    <table class="col-md-12 table-bordered table-striped table-condensed cf">
+                        <thead class="cf">
+                            <tr>
+                                <th>TANK SIZE</th>
+                                <th>WIDTH</th>
+                                <th class="numeric">LENGTH</th>
+                                <th class="numeric">HEIGHT</th>
+                               
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in ViewBag.doubleact)
+                            {
+                                <tr>
+                                    <td data-title="Code">@item.tanksize L</td>
+                                    <td data-title="Company">@item.width MM</td>
+                                    <td data-title="Price" class="numeric">@item.length MM</td>
+                                    <td data-title="Change" class="numeric">@item.HEIGHT MM</td>
+                                    
+
+                                </tr>
+                            }
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class=" text-center">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="text-center">
+                        PT
+                    </h4>
+
+                </div>
+                <div id="no-more-tables">
+                    <table class="col-md-12 table-bordered table-striped table-condensed cf">
+                        <thead class="cf">
+                            <tr>
+                                <th>TANK SIZE</th>
+                                <th>WIDTH</th>
+                                <th class="numeric">LENGTH</th>
+                                <th class="numeric">HEIGHT</th>
+                                
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.pt)
+                            {
+                                <tr>
+                                    <td data-title="Code">@item.tanksize L</td>
+                                    <td data-title="Company">@item.width MM</td>
+                                    <td data-title="Price" class="numeric">@item.length MM</td>
+                                    <td data-title="Change" class="numeric">@item.HEIGHT MM</td>
+                                   
+
+                                </tr>
+                            }
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

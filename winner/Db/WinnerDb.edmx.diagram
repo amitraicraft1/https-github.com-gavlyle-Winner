@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bd9f7b81b6464343a0dd29b288cf0687" Name="Diagram1" ZoomLevel="35">
+        <EntityTypeShape EntityType="winnerModel.ACPPACKDOUBLEACTING" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKDUTYCYCLE" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKFLOWRATE" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKFURTHERCOMMENT" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKMOTORSIZE" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKOPERATION" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKPENDENT" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKPOSITIONOFMOTOR" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKPRESSURESETTING" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKPT" Width="1.5" PointX="7.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKQUANTITY" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKRESERVOIRSIZE" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKSINGLEACTING" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKTYPEOFSYSTEM" Width="1.5" PointX="11.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.ACPPACKVOLTAGE" Width="1.5" PointX="11.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.CARTRIDGE" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.CARTRIDGESProduct" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.CARTRIDGESProductdetail" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACK_SYSTEM" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKCOMMENT" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKDOUBLEEACTING" Width="1.5" PointX="5.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKFLOWRATE" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKMOTOR_SIZE" Width="1.5" PointX="7.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKMOTORPOSITION" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKOPERATION" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKPENDENT" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKPRESSURESETTING" Width="1.5" PointX="13.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKPT" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKQUANTITY" Width="1.5" PointX="15.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKRESERVOIRSIZE" Width="1.5" PointX="15.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKSINGLEACTING" Width="1.5" PointX="15.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.DCPPACKVOLTAGE" Width="1.5" PointX="13.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.Equivalent" Width="1.5" PointX="15.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.OPTIONALBODY" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.OPTIONALCOIL" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="winnerModel.OPTIONALHIRSHMANLED" Width="1.5" PointX="3" PointY="17.625" IsExpanded="true" />
+        <AssociationConnector Association="winnerModel.FK_CARTRIDGESProduct_CARTRIDGES" ManuallyRouted="false" />
+        <AssociationConnector Association="winnerModel.FK_CARTRIDGESProductdetails_CARTRIDGES" ManuallyRouted="false" />
+        <AssociationConnector Association="winnerModel.FK_OPTIONALBODY_CARTRIDGES" ManuallyRouted="false" />
+        <AssociationConnector Association="winnerModel.FK_OPTIONALCOIL_CARTRIDGES" ManuallyRouted="false" />
+        <AssociationConnector Association="winnerModel.FK_OPTIONALHIRSHMANLED_CARTRIDGES" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

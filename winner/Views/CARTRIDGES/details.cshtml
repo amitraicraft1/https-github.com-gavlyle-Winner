@@ -1,0 +1,105 @@
+﻿@model List<winner.Db.CARTRIDGESProduct>
+@{
+    ViewBag.Title = "details";
+}
+<style>
+    .thumbnail img
+    {
+        height:150px;
+        width:200px;
+         padding:15px;
+
+    }
+   .item
+   {
+ margin:15px 0px 15px 0px;
+  
+   }
+   .thumbnail
+   {
+border: solid 1px #EF0111;
+   }
+
+</style>
+<section class="site-section site-section-light site-section-top " style="color:#E60000;">
+    @*<div class="well well-sm">
+        <strong>Category Title</strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-th-list">
+                </span>List
+            </a> <a href="#" id="grid" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-th"></span>Grid
+            </a>
+        </div>
+    </div>*@
+    <div id="products" class="row list-group">
+        @foreach (var item in Model)
+        {
+
+
+            <div class="item  col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                    <img class="group list-group-image" src="@item.imgurl" alt="" />
+                    <div class="caption ">
+                        <h6 class="group inner list-group-item-heading text-center">
+                            @item.name
+                        </h6>
+                        <p class="group inner list-group-item-text text-center">
+                            <h3 class="group inner list-group-item-heading text-center">Technical Data</h3>
+
+                            <div class="col-xs-6 col-md-8">
+                                Max. Pressure
+                            </div>
+                            <div class="col-xs-6 col-md-4">
+                                @item.maxpressure bar
+                            </div>
+                            <div class="col-xs-6 col-md-8">
+                                Max. Flow
+                            </div>
+                            <div class="col-xs-6 col-md-4">
+                                @item.maxflow l/min
+                            </div>
+                            <div class="col-xs-6 col-md-8">
+                                Cavity-Tooling
+                            </div>
+                            <div class="col-xs-6 col-md-4">
+                                @item.cavitytooling
+                            </div>
+                            <div class="col-xs-6 col-md-8">
+                                Installation torque
+                            </div>
+                            <div class="col-xs-6 col-md-4">
+                                @item.intallationtorque Nm
+                            </div>
+                           
+                            <div class="col-xs-6 col-md-8">
+                                Weight 
+                            </div>
+                            <div class="col-xs-6 col-md-4">
+                                @item.weight Kg
+                            </div>
+
+
+                        </p>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 text-center">
+                                <p class="lead">
+                                    @item.productnumber
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-md-12 text-center">
+                                <a class="btn  button" href="@Url.Action("productdetails", "CARTRIDGES", new { partno = @item.productnumber, CARTRIDGESID=@item.CARTRIDGESID })">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        }
+    </div>
+</section>
